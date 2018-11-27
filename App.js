@@ -9,6 +9,7 @@ import {
   AsyncStorage,
   TouchableOpacity
 } from "react-native"
+import Quiz from './src/Quiz'
 
 // OOP
 class App extends Component {
@@ -87,6 +88,10 @@ class App extends Component {
               'Show Loading Spinner' } 
           </Text>
         </TouchableOpacity>
+
+        <Quiz />
+
+
       </View>
     )
   }

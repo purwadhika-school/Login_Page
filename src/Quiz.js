@@ -28,10 +28,9 @@ class Quiz extends Component {
 
         <TouchableOpacity onPress={() => this.changeStateValue()}>
           <Text>
-            {" "}
             {this.state.isShowData
               ? "Hide Color and Year"
-              : "Show Color and Year"}{" "}
+              : "Show Color and Year"}
           </Text>
         </TouchableOpacity>
       </View>
