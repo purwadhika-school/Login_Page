@@ -14,6 +14,10 @@ class Quiz extends Component {
     }
   }
 
+  componentDidMount(){
+    this.props.iniDataPropsPertamaSaya()
+  }
+
   changeStateValue = () => {
     this.setState({ isShowData: !this.state.isShowData })
   }
@@ -21,6 +25,8 @@ class Quiz extends Component {
   render() {
     return (
       <View>
+        {/* { this.props.iniDataPropsPertamaSaya && tampilkan UI nya } */}
+        {/* { this.props.iniDataPropsKeduaSaya } */}
         { this.state.isShowData && <Text>{this.state.Color}</Text>}
         <Text>{this.state.Brand}</Text>
         <Text>{this.state.Type}</Text>

@@ -9,7 +9,7 @@ import {
   AsyncStorage,
   TouchableOpacity
 } from "react-native"
-import Quiz from './src/Quiz'
+import Quiz from "./src/Quiz"
 
 // OOP
 class App extends Component {
@@ -41,9 +41,7 @@ class App extends Component {
     this.setState({ isShowLoading: !this.state.isShowLoading })
   }
 
-  tampilkanNamaUser = ( ) => {
-
-  }
+  tampilkanNamaUser = () => {}
 
   // 3
   render() {
@@ -72,7 +70,7 @@ class App extends Component {
         )}
 
         <TouchableOpacity
-          onPress={ () => this.manipulateLoadingState()}
+          onPress={() => this.manipulateLoadingState()}
           style={{
             borderRadius: 3,
             borderWidth: 1,
@@ -83,15 +81,16 @@ class App extends Component {
         >
           <Text style={[Styles.txtButton, { textDecorationStyle: "dotted" }]}>
             {/* Ternary operator */}
-            {this.state.isShowLoading ? 
-              'Hide Loading Spinner' : 
-              'Show Loading Spinner' } 
+            {this.state.isShowLoading
+              ? "Hide Loading Spinner"
+              : "Show Loading Spinner"}
           </Text>
         </TouchableOpacity>
 
-        <Quiz />
-
-
+        <Quiz
+          iniDataPropsPertamaSaya={this.manipulateLoadingState()}
+          iniDataPropsKeduaSaya={this.state.isShowLoading}
+        />
       </View>
     )
   }
@@ -127,8 +126,6 @@ export default App
 // Class Component:
 // 1. State
 // 2. Lifecycle
+// 3. Props
 
-
-// JS == 
-
-
+// JS ==
