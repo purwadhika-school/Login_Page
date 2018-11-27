@@ -21,10 +21,10 @@ class Quiz extends Component {
   render() {
     return (
       <View>
-        <Text>{this.state.Color}</Text>
+        { this.state.isShowData && <Text>{this.state.Color}</Text>}
         <Text>{this.state.Brand}</Text>
         <Text>{this.state.Type}</Text>
-        <Text>{this.state.Year}</Text>
+        { this.state.isShowData && <Text>{this.state.Year}</Text> }
 
         <TouchableOpacity onPress={() => this.changeStateValue()}>
           <Text>
